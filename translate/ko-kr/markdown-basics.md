@@ -1,14 +1,14 @@
-# Markdown Basics
+# 마크다운 입문
 
 This article is a brief introduction to [GitHub Flavored Markdown writing](https://guides.github.com/features/mastering-markdown/).
 
-## What is Markdown?
+## Markdown 이란?
 
-`Markdown` is a way to style text on the web. You control the display of the document; formatting words as bold or italic, adding images, and creating lists are just a few of the things we can do with Markdown. Mostly, Markdown is just regular text with a few non-alphabetic characters thrown in, like `#` or `*`.
+`마크다운` 은 웹에서 텍스트를 스타일링하는 방법이다. 사용자가 문서의 표시를 제어한다. 마크다운으로 수행할 수 있는 방법 중에서는 글자를 굵게 또는 기울임꼴로 지정하거나 이미지를 추가하고 목록을 만드는 작업 등이 있다. 대부분의 마크다운은 '#' 또는 '*' 같은 특수 문자가 포함된 일반 텍스트로 작성된다.
 
-## Syntax guide
+## 문법
 
-### Headers
+### 헤더
 
 ```markdown
 # This is an <h1> tag
@@ -24,7 +24,8 @@ This article is a brief introduction to [GitHub Flavored Markdown writing](https
 ###### This is an <h6> tag
 ```
 
-If you want to add `id` and `class` to the header, then simply append `{#id .class1 .class2}`. For example:
+`id` 와 `class` 를 헤더가 추가하고 싶다면, `{#id .class1 .class2}`를 덧붙인다. 
+예시:
 
 ```markdown
 # This heading has 1 id {#my_id}
@@ -34,7 +35,7 @@ If you want to add `id` and `class` to the header, then simply append `{#id .cla
 
 > This is a MPE extended feature.
 
-### Emphasis
+### 강조
 
 <!-- prettier-ignore -->
 ```markdown
@@ -49,9 +50,9 @@ _You **can** combine them_
 ~~This text will be strikethrough~~
 ```
 
-### Lists
+### 리스트
 
-#### Unordered List
+#### 순서가 없는 리스트
 
 ```markdown
 - Item 1
@@ -60,7 +61,7 @@ _You **can** combine them_
   - Item 2b
 ```
 
-#### Ordered List
+#### 순서가 있는 리스트
 
 ```markdown
 1. Item 1
@@ -70,14 +71,14 @@ _You **can** combine them_
    1. Item 3b
 ```
 
-### Images
+### 이미지
 
 ```markdown
 ![GitHub Logo](/images/logo.png)
 Format: ![Alt Text](url)
 ```
 
-### Links
+### 링크
 
 ```markdown
 https://github.com - automatic!
@@ -93,40 +94,40 @@ As Kanye West said:
 > the present is our past.
 ```
 
-### Horizontal Rule
+### 수평선
 
 ```markdown
-Three or more...
+세 개 이상의...
 
 ---
 
-Hyphens
+하이폰(-)
 
 ---
 
-Asterisks
+별표(*)
 
 ---
 
-Underscores
+밑줄(_)
 ```
 
-### Inline code
+### 인라인 코드
 
 ```markdown
 I think you should use an
 `<addr>` element here instead.
 ```
 
-### Fenced code block
+### 코드 블록
 
-You can create fenced code blocks by placing triple backticks <code>\`\`\`</code> before and after the code block.
+코드 블록 앞 뒤에 3개의 백틱 <code>\`\`\`</code> 을 배치하여 코드블록을 만들 수 있다.
 
-#### Syntax Highlighting
+#### 구문 하이라이트
 
-You can add an optional language identifier to enable syntax highlighting in your fenced code block.
+선택적 언어 식별자를 추가하여 코드 블록에서 구문 하이라이트를 사용할 수 있다.
 
-For example, to syntax highlight Ruby code:
+예를 들어, Ruby 코드에 구문 하이라이트를 적용하면:
 
     ```ruby
     require 'redcarpet'
@@ -140,11 +141,11 @@ markdown = Redcarpet.new("Hello World!")
 puts markdown.to_html
 ```
 
-#### Code block class (MPE extended feature)
+#### 코드 블록 클래스 (MPE extended feature)
 
-You can set `class` for your code blocks.
+코드블록에 `class` 를 설정할 수 있다.
 
-For example, to add `class1 class2` to a code block
+예를 들어, 코드블록에 `class1 class2` 를 추가하려면
 
     ```javascript {.class1 .class}
     function add(x, y) {
@@ -152,11 +153,11 @@ For example, to add `class1 class2` to a code block
     }
     ```
 
-##### line-numbers
+##### 줄 번호(코드 라인)
 
-You can enable line number for a code block by adding `line-numbers` class.
+코드 블록에 `line-numbers` 클래스를 추가하여 줄 번호(코드 라인)를 만들 수 있다.
 
-For example:
+예시:
 
 ````markdown
 ```javascript {.line-numbers}
@@ -168,9 +169,9 @@ function add(x, y) {
 
 ![screen shot 2017-07-14 at 1 20 27 am](https://user-images.githubusercontent.com/1908863/28200587-a8582b0a-6832-11e7-83a7-6c3bb011322f.png)
 
-##### highlighting rows
+##### 행 하이라이트
 
-You can highlight rows by add `highlight` attribute:
+'highlight'특성을 추가해서 행을 하이라이트할 수 있다.
 
 ````markdown
 ```javascript {highlight=10}
@@ -183,7 +184,7 @@ You can highlight rows by add `highlight` attribute:
 ```
 ````
 
-### Task lists
+### 일정표
 
 ```markdown
 - [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
@@ -192,9 +193,9 @@ You can highlight rows by add `highlight` attribute:
 - [ ] this is an incomplete item
 ```
 
-### Tables
+### 표
 
-You can create tables by assembling a list of words and dividing them with hyphens `-` (for the first row), and then separating each column with a pipe `|`:
+분류를 하이폰 '-'(첫 번째 행에 대해)으로 나눈 다음 각 열을 파이프 '|'로 구분하여 표를 만들 수 있다.
 
 <!-- prettier-ignore -->
 ```markdown
@@ -204,37 +205,37 @@ Content from cell 1 | Content from cell 2
 Content in the first column | Content in the second column
 ```
 
-## Extended syntax
+## 확장 구문
 
-### Table
+### 표
 
-> Need to enable `enableExtendedTableSyntax` in extension settings to get it work.
+> 작동하려면 확장 설정에서 `enableExtendedTableSyntax` 를 활성화시켜야된다.
 
 ![screen shot 2017-07-15 at 8 16 45 pm](https://user-images.githubusercontent.com/1908863/28243710-945e3004-699a-11e7-9a5f-d74f6c944c3b.png)
 
-### Emoji & Font-Awesome
+### 이모지 & Font-Awesome
 
-> This only works for `markdown-it parser` but not `pandoc parser`.  
-> Enabled by default. You can disable it from the package settings.
+> `markdown-it parser`에서만 작동하고 `pandoc parser`에서는 작동하지 않는다.  
+> 기본값으로 활성화 되어있고, 패키지 설정에서 비활성화 시킬 수 있다. 
 
 ```
 :smile:
 :fa-car:
 ```
 
-### Superscript
+### 위첨자
 
 ```markdown
 30^th^
 ```
 
-### Subscript
+### 첨자
 
 ```markdown
 H~2~O
 ```
 
-### Footnotes
+### 각주
 
 ```markdown
 Content [^1]
@@ -242,7 +243,7 @@ Content [^1]
 [^1]: Hi! This is a footnote
 ```
 
-### Abbreviation
+### 약어
 
 ```markdown
 *[HTML]: Hyper Text Markup Language
@@ -251,7 +252,7 @@ The HTML specification
 is maintained by the W3C.
 ```
 
-### Mark
+### 표시
 
 ```markdown
 ==marked==
@@ -259,8 +260,8 @@ is maintained by the W3C.
 
 ### CriticMarkup
 
-CriticMarkup is **disabled** by default, but you can enable it from the package settings.  
-For more information about CriticMarkup, check [CriticMarkup User's Guide](https://criticmarkup.com/users-guide.php).
+CriticMarkup은 기본값으로 **사용불가능** 하도록 설정되어있다. 하지만 패키지 설정을 통해 활성화시킬 수 있다.  
+[CriticMarkup User's Guide](https://criticmarkup.com/users-guide.php) 에서 CriticMarkup 에 대한 정보를 더 알 수 있다.
 
 There are five types of Critic marks:
 
@@ -272,7 +273,7 @@ There are five types of Critic marks:
 
 > CriticMarkup only works with the markdown-it parser, but not the pandoc parser.
 
-### Admonition
+### 경고
 
 ```
 !!! note This is the admonition title
@@ -281,9 +282,9 @@ There are five types of Critic marks:
 
 > Please see more information at https://squidfunk.github.io/mkdocs-material/reference/admonitions/
 
-## References
+## 참조
 
 - [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 - [Daring Fireball: Markdown Basics](https://daringfireball.net/projects/markdown/basics)
 
-[➔ Math](math.md)
+[➔ 수식 입력](math.md)
