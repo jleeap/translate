@@ -271,7 +271,7 @@ There are five types of Critic marks:
 - Comment `{>> <<}`
 - Highlight `{== ==}{>> <<}`
 
-> CriticMarkup only works with the markdown-it parser, but not the pandoc parser.
+> CriticMarkup 은 markdown-it parser 에서만 작동한다, pandoc parser 에서는 지원하지 않는다.
 
 ### 경고
 
@@ -280,7 +280,7 @@ There are five types of Critic marks:
     This is the admonition body
 ```
 
-> Please see more information at https://squidfunk.github.io/mkdocs-material/reference/admonitions/
+> https://squidfunk.github.io/mkdocs-material/reference/admonitions/ 에서 더 많은 정보를 얻을 수 있다.
 
 ## 참조
 

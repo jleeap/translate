@@ -4,6 +4,7 @@
 1. [pledging on GitHub Sponsors!](https://github.com/sponsors/shd101wyy)
 2. [PayPal](paypal.md)
 3. [微信支付 Wechat Pay](wechat.md). 
+
 같은 후원 수준의 후원자는 후원일 순서대로 기록됩니다.
 후원을 하셨다면 다음 메일로 아래의 양식대로 보내주시길 바랍니다.( `shd101wyy@gmail.com` )
 `[당신의 이름](원하는 URL링크) $후원하신 금액`. 

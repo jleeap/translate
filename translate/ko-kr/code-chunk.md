@@ -33,20 +33,19 @@
 
 ## Format
 
-You can configure code chunk options in format of <code>\`\`\`lang {cmd=your_cmd opt1=value1 opt2=value2 ...}</code>.
-When a value of an attribute is `true`, it can be omitted (e.g. `{cmd hide}` is identical to `{cmd=true hide=true}`).
+코드 청크를 다음과 같이 구현할 수 있다.<code>\`\`\`lang {cmd=your_cmd opt1=value1 opt2=value2 ...}</code>.
+특성값이 `true`라면, 생략가능하다. (예로 `{cmd hide}` 는 `{cmd=true hide=true}`와 동일하다.)
 
 **lang**
-The grammar that the code block should highlight.
-It should be put at the most front.
+코드블록이 사용하는 문법이다. (ex. python ) 가장 앞에 위치해야한다.
 
-## Basic Options
+## 기본 옵션
 
 **cmd**
-The command to run.
-If `cmd` is not provided, then `lang` will be regarded as command.
+실행할 명령이다.
+`cmd`가 주어지지 않으면, `lang`이 명령으로 간주된다.
 
-eg:
+예시:
 
     ```python {cmd="/usr/local/bin/python3"}
     print("This will run python3 program")
@@ -55,14 +54,14 @@ eg:
 **output**
 `html`, `markdown`, `text`, `png`, `none`
 
-Defines how to render code output.
-`html` will append output as html.
-`markdown` will parse output as markdown. (MathJax and graphs will not be supported in this case, but KaTeX works)
-`text` will append output to a `pre` block.
-`png` will append output as `base64` image.
-`none` will hide the output.
+코드 출력을 어떻게 렌더링할지 결정한다.
+`html` 은 html 으로 출력된다.
+`markdown` 은 마크다운으로 출력된다. (MathJax 와 그래프는 이경우에 지원하지 않는다. 단, KaTeX는 지원한다.)
+`text` 는 `pre` 블록으로 출력된다.
+`png` 는 `base64` 이미지로 출력된다.
+`none` 은 출력을 숨긴다.
 
-eg:
+예시:
 
     ```gnuplot {cmd=true output="html"}
     set terminal svg
@@ -77,7 +76,8 @@ eg:
 ![screen shot 2017-07-28 at 7 14 24 am](https://user-images.githubusercontent.com/1908863/28716734-66142a5e-7364-11e7-83dc-a66df61971dc.png)
 
 **args**
-args that append to command. eg:
+명령에 추가되는 arguments 이다.  
+예시:
 
     ```python {cmd=true args=["-v"]}
     print("Verbose will be printed first")
@@ -88,20 +88,20 @@ args that append to command. eg:
     ```
 
 **stdin**
-If `stdin` is set to true, then the code will be passed as stdin instead of as file.
+`stdin` 을 `true` 로 설정하면 코드가 파일이 아닌 stdin 으로 전달하게 한다.
 
 **hide**
-`hide` will hide code chunk but only leave the output visible. default: `false`
-eg:
+`hide`는 코드 청크를 숨기고 출력만 표시하게 한다. 기본값: `false`
+예시:
 
     ```python {hide=true}
     print('you can see this output message, but not this code')
     ```
 
 **continue**
-If set `continue=true`, then this code chunk will continue from the last code chunk.
-If set `continue=id`, then this code chunk will continue from the code chunk of id.
-eg:
+`continue=true` 로 설정하면 해당 코드 청크가 바로 이전의 마지막 코드 청크부터 이어진다.
+`continue=id` 로 설정하면 해당 코드 청크는 주어진 ID의 코드 청크에서 이어진다.
+예시:
 
     ```python {cmd=true id="izdlk700"}
     x = 1
@@ -116,9 +116,9 @@ eg:
     ```
 
 **class**
-If set `class="class1 class2"`, then `class1 class2` will be add to the code chunk.
+`class="class1 class2"`를 설정하면 `class1 class2` 가 코드 청크에 추가된다.
 
-- `line-numbers` class will show line numbers to code chunk.
+- `line-numbers` 클래스는 코드 청크에 줄 번호(코드 라인)을 표기한다.
 
 **element**
 The element that you want to append after.
@@ -232,7 +232,7 @@ Then we can click the `run` button at the preview to run our code.
 
 ![erd](https://user-images.githubusercontent.com/1908863/28221395-bcd0bd76-6888-11e7-8c6e-925e228d02cc.gif)
 
-## Showcases (outdated)
+## 쇼케이스 (outdated)
 
 **bash**
 ![Screen Shot 2016-09-24 at 1.41.06 AM](https://i.imgur.com/v5Y7juh.png)
@@ -240,9 +240,9 @@ Then we can click the `run` button at the preview to run our code.
 **gnuplot with svg output**
 ![Screen Shot 2016-09-24 at 1.44.14 AM](https://i.imgur.com/S93g7Tk.png)
 
-## Limitations
+## 제한사항
 
-- Doesn't work with `ebook` yet.
-- Might be buggy when using `pandoc document export`
+- `ebook`에서 아직 장동하지 않는다.
+- `pandoc document export`에서 사용할 때, 버그가 발생할 수 있다.
 
-[➔ Presentation](presentation.md)
+[➔ 프레젠테이션](presentation.md)
