@@ -1,6 +1,6 @@
 # PDF Document
 
-## Overview
+## 개요
 
 To create a PDF document, you need to specify `pdf_document` output format in the front-matter of your document:
 

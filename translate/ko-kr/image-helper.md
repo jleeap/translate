@@ -1,6 +1,6 @@
 # Image Helper
 
-image helper는 당신이 빠르게 이미지를 복사하고 업로드할 수 있도록 돕는다.
+image helper는 빠르게 이미지를 복사하고 업로드할 수 있도록 돕는다.
 
 ## 사용법
 

@@ -121,24 +121,24 @@
 - `line-numbers` 클래스는 코드 청크에 줄 번호(코드 라인)을 표기한다.
 
 **element**
-The element that you want to append after.
-Check the **Plotly** example below.
+뒤에 추가하고자 하는 요소이다.
+아래의 **Plotly** 예제에서 확인할 수 있다.
 
 **run_on_save** `boolean`
-Run code chunk when the markdown file is saved. Default `false`.
+마크다운 파일을 저장할 때 코드청크를 실행한다. 기본값은 `false`이다.
 
 **modify_source** `boolean`
-Insert code chunk output directly into markdown source file. Default `false`.
+코드 청크의 출력값을 마크다운 소스 파일에 직접 삽입한다. 기본값은 `false`이다.
 
 **id**
-The `id` of the code chunk. This option would be useful if `continue` is used.
+코드청크의 `id` 이다. 해당 옵션은 `continue`를 사용할 때 유용하다.
 
-## Macro
+## 매크로
 
 - **input_file**
-  `input_file` is automatically generated under the same directory of your markdown file and will be deleted after running code that is copied to `input_file`.
-  By default, it is appended at the very end of program arguments.
-  However, you can set the position of `input_file` in your `args` option by `$input_file` macro. eg:
+  `input_file` 은 마크다운 파일과 동일한 디렉토리에 자동적으로 생성되며, `input_file`에 복사된 코드를 실행한 후 삭제된다.
+  기본값으로 프로그램 argument 의 마지막에 추가된다.
+  그러나 `args` 옵션에서 `$input_file` 매크로로  `input_file`의 위치를 설정할 수 있다. 예시:
 
       ```program {cmd=true args=["-i", "$input_file", "-o", "./output.png"]}
       ...your code here
@@ -146,8 +146,8 @@ The `id` of the code chunk. This option would be useful if `continue` is used.
 
 ## Matplotlib
 
-If set `matplotlib=true`, then the python code chunk will plot graphs inline in the preview.
-eg:
+`matplotlib=true`으로 설정하면 파이썬 코드 청크가 미리보기에서 플롯 그래프를 인라인으로 출력한다.
+예시:
 
     ```python {cmd=true matplotlib=true}
     import matplotlib.pyplot as plt
@@ -159,9 +159,9 @@ eg:
 
 ## LaTeX
 
-Markdown Preview Enhanced also supports `LaTeX` compilation.
-Before using this feature, you need to have [pdf2svg](extra.md?id=install-svg2pdf) and [LaTeX engine](extra.md?id=install-latex-distribution) installed.
-Then you can simply write LaTeX in code chunk like this:
+Markdown Preview Enhanced 는 `LaTeX` 컴파일을 지원한다.
+이 기능을 사용하기 위해서는 [pdf2svg](extra.md?id=install-svg2pdf) 와 [LaTeX engine](extra.md?id=install-latex-distribution) 이 설치되어있어야한다.
+다음과 같이 코드청크에 LaTeX를 작성할 수 있다. 예시:
 
     ```latex {cmd=true}
     \documentclass{standalone}
@@ -172,38 +172,38 @@ Then you can simply write LaTeX in code chunk like this:
 
 ![screen shot 2017-07-28 at 7 15 16 am](https://user-images.githubusercontent.com/1908863/28716762-8686d980-7364-11e7-9669-71138cb2e6e7.png)
 
-### LaTeX output configuration
+### LaTeX 출력 구성
 
 **latex_zoom**
-If set `latex_zoom=num`, then the result will be scaled `num` times.
+`latex_zoom=num`으로 설정하면, 결과값이 `num` 배율로 스케일링된다.
 
 **latex_width**
-The width of result.
+결과의 너비이다.
 
 **latex_height**
-The height of result.
+결과의 높이이다.
 
 **latex_engine**
-The latex engine that you used to compile `tex` file. By default `pdflatex` is used.
+`tex`파일을 컴파일 할 때 이용하는 latex 엔진이다. 기본값으로 `pdflatex` 을 이용한다.
 
-### TikZ example
+### TikZ 예시
 
-It is recommended to use `standalone` while drawing `tikz` graphs.
+`tikz` 그래프를 그릴 때는  `standalone`을 이용하는 것을 추천한다.
 ![screen shot 2017-07-14 at 11 27 56 am](https://user-images.githubusercontent.com/1908863/28221069-8113a5b0-6887-11e7-82fa-23dd68f2be82.png)
 
 ## Plotly
 
-Markdown Preview Enhanced allows you to draw [Plotly](https://plot.ly/) easily.
-For example:
+Markdown Preview Enhanced 는 [Plotly](https://plot.ly/) 를 쉽게 그릴 수 있다.
+예시:
 ![screen shot 2017-10-20 at 10 41 25 am](https://user-images.githubusercontent.com/1908863/31829580-526a0c06-b583-11e7-82f2-09ea7a0b9672.png)
 
-- The first line `@import "https://cdn.plot.ly/plotly-latest.min.js"` uses the [file import](file-imports.md) functionality to import `plotly-latest.min.js` file.
-  However, it is recommended to download the js file to local disk for better performance.
-- Then we created a `javascript` code chunk.
+- 첫번째 줄 `@import "https://cdn.plot.ly/plotly-latest.min.js"` 은 [file import](file-imports.md) 기능을 이용하여  `plotly-latest.min.js` 파일을 가져왔다.
+  물론, 더 좋은 성능을 위해서는 로컬 디스크에 javascript 파일을 다운로드 하는 것이 낫다.
+- 위의 예시와 같이 `javascript` 코드 청크를 만들었다.
 
 ## Demo
 
-This demo shows you how to render entity-relation diagram by using [erd](https://github.com/BurntSushi/erd) library.
+이 데모에서는 [erd](https://github.com/BurntSushi/erd) 라이브러리를 이용해서 엔티티 다이어그램을 렌더링하는 방법을 보여준다.
 
     ```erd {cmd=true output="html" args=["-i", "$input_file" "-f", "svg"]}
 
@@ -224,11 +224,11 @@ This demo shows you how to render entity-relation diagram by using [erd](https:/
 
 `erd {cmd=true output="html" args=["-i", "$input_file", "-f", "svg"]}`
 
-- `erd` the program that we are using. (_you need to have the program installed first_)
-- `output="html"` we will append the running result as `html`.
-- `args` field shows the arguments that we will use.
+- `erd` 우리가 사용할 프로그램이다. (_프로그램이 먼저 설치되어 있어야한다._)
+- `output="html"` 결과값을 `html`으로 출력한다.
+- `args` 필드는 우리가 사용할 arguments를 보여준다.
 
-Then we can click the `run` button at the preview to run our code.
+미리보기에서 `run` 버튼을 눌러 코드를 실행할 수 있다.
 
 ![erd](https://user-images.githubusercontent.com/1908863/28221395-bcd0bd76-6888-11e7-8c6e-925e228d02cc.gif)
 
