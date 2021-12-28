@@ -30,7 +30,7 @@
         - [RTF](pandoc-rtf.md)
         - [Beamer](pandoc-beamer.md)
         - [Custom](pandoc-custom.md)
-        - [Bibliographies and Citations](pandoc-bibliographies-and-citations.md)
+        - [참고문헌과 인용문](pandoc-bibliographies-and-citations.md)
     - [Markdown (GFM)](markdown.md)
 
 - 설정 & 확장

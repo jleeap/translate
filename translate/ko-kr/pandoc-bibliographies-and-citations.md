@@ -128,7 +128,7 @@ nocite: |
 
 위의 예시에서 문서는 `item3`만 인용하지만, 참고문헌은 `item1`, `item2`, 그리고 `item3`을 포함한다.
 
-### Citation Styles
+### 인용 스타일
 
 기본적으로 pandoc은 인용 및 참조에 Chicago author-date 형식을 사용한다. 다른 스타일을 사용하려면 `csl` 메타데이터 필드에 CSL 1.0 스타일 파일을 지정해야 한다. 예시:
 

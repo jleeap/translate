@@ -2,7 +2,7 @@
 
 ## 개요
 
-Beamer 프레젠테이션을 **Markdown Preview Enhanced**에서 생성할 때, 문서의 font-matter 에 `beamer_presentation` 을 `output`으로 지정한다.   
+Beamer 프레젠테이션을 **Markdown Preview Enhanced**에서 생성할 때, 문서의 font-matter 에서 `beamer_presentation` 을 `output`으로 지정한다.   
  `#` 와 `##` 헤더 태그를 이용해 구분된 슬라이드 쇼를 만들 수 있다.(헤더 없이 수평줄(`----`)을 이용해 새 슬라이드를 만들 수도 있다.)  
 아래는 간단한 슬라이드 쇼에 대한 예시이다.
 
@@ -122,9 +122,10 @@ output:
 
 ## 구문 하이라이트
 
-`highlight` 옵션은 구문 하이라이트 스타일을 지정한다. 지원되는 스타일로는 “default”, “tango”, “pygments”, “kate”, “monochrome”, “espresso”, “zenburn”, 그리고 “haddock” 이 있다.(구문 하이라이트를 사용하고 싶지 않다면 null 로 지정한다.):
+`highlight` 옵션은 구문 하이라이트 스타일을 지정한다. 지원되는 스타일로는 “default”, “tango”, “pygments”, “kate”, “monochrome”, “espresso”, “zenburn”, 그리고 “haddock” 이 있다.(구문 하이라이트를 사용하고 싶지 않다면 null 로 지정한다.)
 
-For example:
+
+예시:
 
 ```yaml
 ---
@@ -152,7 +153,7 @@ output:
 
 ## 공유 옵션
 
-여러 개의 문서들의 공유 옵션을 통일해서 정해주고 싶다면 디렉토리에  `_output.yaml` 이름을 포함하면 된다. YAML 구분기호나 출력개체는 이 파일에 적용되지 않는다. 예시:
+여러 개의 문서들의 옵션을 통일해서 정해주고 싶다면 디렉토리에  `_output.yaml` 이름을 포함하면 된다. YAML 구분기호나 출력개체는 이 파일에 적용되지 않는다. 예시:
 
 **\_output.yaml**
 
