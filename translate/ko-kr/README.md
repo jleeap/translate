@@ -16,7 +16,7 @@
 - [Atom](installation.md)
 - [VS Code](vscode-installation.md)
 
-## Features
+## 기능
 
 - **자동 스크롤 동기화**
 - **[외부파일 삽입](file-imports.md)**

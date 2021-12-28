@@ -31,7 +31,7 @@
 - `Markdown Preview Enhanced: Run All Code Chunks` 또는 <kbd>ctrl-shift-enter</kbd>
   모든 코드 청크를 실행한다.
 
-## Format
+## 형식
 
 코드 청크를 다음과 같이 구현할 수 있다.<code>\`\`\`lang {cmd=your_cmd opt1=value1 opt2=value2 ...}</code>.
 특성값이 `true`라면, 생략가능하다. (예로 `{cmd hide}` 는 `{cmd=true hide=true}`와 동일하다.)
