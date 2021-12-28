@@ -59,9 +59,9 @@ output:
 
 `path` 가 지정되어 있지 않다면 문서는 자동적으로 같은 리렉토리 안에 내보내기한 파일을 저장한다.
 
-## Incremental Bullets
+## 글머리 기호
 
-You can render bullets incrementally by adding the `incremental` 옵션을 더해 글머리 기호를 :
+`incremental` 옵션을 더해 글머리 기호를 설정할 수 있다. 예시:
 
 ```yaml
 ---
@@ -72,7 +72,7 @@ output:
 
 ```
 
-If you want to render bullets incrementally for some slides but not others you can use this syntax:
+일부 슬라이드에 대해서만 글머리 기호를 렌더링하기 위해서는 아래의 구문을 사용할 수 있습니다. 예시:
 
 ```markdown
 > - Eat eggs

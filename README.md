@@ -3,7 +3,7 @@
 ___
 ## 서론
 ***
-###개요 
+### 개요 
 >[**Markdown Preview Enhanced**](https://github.com/shd101wyy/markdown-preview-enhanced) 을 번역하는 프로젝트.
 > 
 > 번역할 파일(번역전 파일)은 [translate](/translate/)에, 번역한 파일(번역 후 파일)은 하위 디렉토리인 [ko-kr](/translate/ko-kr/)에 보관하였다.
